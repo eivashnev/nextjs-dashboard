@@ -3,12 +3,10 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import styles from '@/app/ui/home.module.css'
 import { lusitana } from '@/app/ui/fonts';
+import Image from 'next/image';
 
 export default function Page() {
   return (
-    
-    
-    
     <main className="flex flex-col p-6 min-h-screen">
       <div className="flex items-end bg-blue-500 p-4 rounded-lg h-20 md:h-52 shrink-0">
         <AcmeLogo />
@@ -32,6 +30,20 @@ export default function Page() {
         </div>
         <div className="flex justify-center items-center md:px-28 md:py-12 p-6 md:w-3/5">
           {/* Add Hero Images Here */}
+          <Image
+            src="/hero-desktop.png"
+            width={1000}
+            height={760}
+            className="md:block hidden"
+            alt="Screenshots of the dashboard project showing desktop version"
+          />
+          <Image
+            src="/hero-mobile.png"
+            width={560}
+            height={620}
+            className='block md:hidden'
+            alt='Screenshots of the dashboard project showing mobile version'
+            />
         </div>
       </div>
     </main>
